@@ -1,0 +1,1014 @@
+{
+  "features": [
+    {
+      "type": "Feature",
+      "properties": {
+        "seamark:type": "wreck",
+        "seamark:wreck:category": "hull_showing"
+      },
+      "geometry": {
+        "coordinates": [
+          [
+            [
+              -71.393208,
+              41.815632
+            ],
+            [
+              -71.393186,
+              41.815529
+            ],
+            [
+              -71.392717,
+              41.815586
+            ],
+            [
+              -71.39274,
+              41.815693
+            ],
+            [
+              -71.393208,
+              41.815632
+            ]
+          ]
+        ],
+        "type": "Polygon"
+      },
+      "id": "078820e6b7a3a0ae7d3015efc5a2904a"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "seamark:type": "buoy_special_purpose",
+        "seamark:buoy_special_purpose:category": "reduced_wake"
+      },
+      "geometry": {
+        "coordinates": [
+          -71.392053,
+          41.816559
+        ],
+        "type": "Point"
+      },
+      "id": "09af017c7a02553b1925eba7d111bcab"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "seamark:type": "obstruction"
+      },
+      "geometry": {
+        "coordinates": [
+          -71.39496,
+          41.812819
+        ],
+        "type": "Point"
+      },
+      "id": "0ab515d93372e50799a4f654bec640d6"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "seamark:type": "wreck"
+      },
+      "geometry": {
+        "coordinates": [
+          [
+            [
+              -71.394507,
+              41.814581
+            ],
+            [
+              -71.394528,
+              41.81458
+            ],
+            [
+              -71.394546,
+              41.814571
+            ],
+            [
+              -71.394579,
+              41.81454
+            ],
+            [
+              -71.394613,
+              41.814487
+            ],
+            [
+              -71.394727,
+              41.814297
+            ],
+            [
+              -71.394743,
+              41.814257
+            ],
+            [
+              -71.394748,
+              41.814219
+            ],
+            [
+              -71.394732,
+              41.814166
+            ],
+            [
+              -71.394723,
+              41.814165
+            ],
+            [
+              -71.394698,
+              41.814181
+            ],
+            [
+              -71.394663,
+              41.814204
+            ],
+            [
+              -71.394631,
+              41.814236
+            ],
+            [
+              -71.394464,
+              41.814526
+            ],
+            [
+              -71.394467,
+              41.814562
+            ],
+            [
+              -71.394485,
+              41.814576
+            ],
+            [
+              -71.394507,
+              41.814581
+            ]
+          ]
+        ],
+        "type": "Polygon"
+      },
+      "id": "0b419db8589cd64ccc27ff2d858a7e62"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "seamark:type": "buoy_lateral",
+        "seamark:buoy_lateral:category": "starboard",
+        "seamark:buoy_lateral:colour": "red",
+        "seamark:buoy_lateral:shape": "conical",
+        "seamark:name": "4N",
+        "seamark:buoy_lateral:system": "iala-b"
+      },
+      "geometry": {
+        "coordinates": [
+          -71.394456,
+          41.81549
+        ],
+        "type": "Point"
+      },
+      "id": "13b3e7e3ea0e7eb00417909dd49db36e"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "type": "start-line"
+      },
+      "geometry": {
+        "coordinates": [
+          [
+            -71.370304,
+            41.835424
+          ],
+          [
+            -71.379628,
+            41.837628
+          ]
+        ],
+        "type": "LineString"
+      },
+      "id": "19c0f5aff2b85e4d8b0cb97f8797ee1e"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "seamark:type": "pylon"
+      },
+      "geometry": {
+        "coordinates": [
+          -71.378504,
+          41.829414
+        ],
+        "type": "Point"
+      },
+      "id": "208cb128be723f7225db8772846e873a"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "seamark:type": "obstruction"
+      },
+      "geometry": {
+        "coordinates": [
+          -71.393741,
+          41.813318
+        ],
+        "type": "Point"
+      },
+      "id": "21f2e73f90e3d6d82e043a5242544d5e"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "seamark:type": "obstruction"
+      },
+      "geometry": {
+        "coordinates": [
+          -71.385084,
+          41.821546
+        ],
+        "type": "Point"
+      },
+      "id": "2269c319f5c5481b6bd1231f8e1d74e4"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "seamark:type": "obstruction"
+      },
+      "geometry": {
+        "coordinates": [
+          -71.394989,
+          41.812817
+        ],
+        "type": "Point"
+      },
+      "id": "2d78648525170eddaeaae6ad1398c540"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "seamark:type": "wreck"
+      },
+      "geometry": {
+        "coordinates": [
+          [
+            [
+              -71.393339,
+              41.81555
+            ],
+            [
+              -71.393352,
+              41.815465
+            ],
+            [
+              -71.393098,
+              41.815445
+            ],
+            [
+              -71.393088,
+              41.815533
+            ],
+            [
+              -71.393339,
+              41.81555
+            ]
+          ]
+        ],
+        "type": "Polygon"
+      },
+      "id": "3118ae3d147a38def605e8c5c2fb8d7f"
+    },
+    {
+      "type": "Feature",
+      "properties": {},
+      "geometry": {
+        "coordinates": [
+          -71.395007,
+          41.813783
+        ],
+        "type": "Point"
+      },
+      "id": "42006a054838b15dea3ef85bfb4926ba"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "seamark:type": ""
+      },
+      "geometry": {
+        "coordinates": [
+          -71.394699,
+          41.813198
+        ],
+        "type": "Point"
+      },
+      "id": "43a079e580f3134bdbb702015993d37d"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "seamark:type": "pylon"
+      },
+      "geometry": {
+        "coordinates": [
+          -71.379641,
+          41.829213
+        ],
+        "type": "Point"
+      },
+      "id": "44bbfac2a77e50a937723551dff94283"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "seamark:type": "wreck"
+      },
+      "geometry": {
+        "coordinates": [
+          [
+            [
+              -71.391686,
+              41.815125
+            ],
+            [
+              -71.391969,
+              41.815059
+            ],
+            [
+              -71.391937,
+              41.814974
+            ],
+            [
+              -71.391646,
+              41.815043
+            ],
+            [
+              -71.391686,
+              41.815125
+            ]
+          ]
+        ],
+        "type": "Polygon"
+      },
+      "id": "453f048f3eb0a52fc37ce58c74776fc5"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "seamark:type": "wreck"
+      },
+      "geometry": {
+        "coordinates": [
+          [
+            [
+              -71.394736,
+              41.813872
+            ],
+            [
+              -71.395008,
+              41.81378
+            ],
+            [
+              -71.394964,
+              41.813705
+            ],
+            [
+              -71.394692,
+              41.8138
+            ],
+            [
+              -71.394736,
+              41.813872
+            ]
+          ]
+        ],
+        "type": "Polygon"
+      },
+      "id": "4a7e4de18c43838ff1ac4bf2b78266eb"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "seamark:type": "pylon"
+      },
+      "geometry": {
+        "coordinates": [
+          -71.379184,
+          41.829326
+        ],
+        "type": "Point"
+      },
+      "id": "4c72d5d526e8854caae8561d3e6b4266"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "type": "official"
+      },
+      "geometry": {
+        "coordinates": [
+          -71.373721,
+          41.776397
+        ],
+        "type": "Point"
+      },
+      "id": "58bd8f53db3e10e8576564418fe6f235"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "type": "finish-line"
+      },
+      "geometry": {
+        "coordinates": [
+          [
+            -71.377914,
+            41.832567
+          ],
+          [
+            -71.373593,
+            41.831556
+          ]
+        ],
+        "type": "LineString"
+      },
+      "id": "5a406c4ba7134f5fe78af6823b586bd1"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "seamark:type": "pylon"
+      },
+      "geometry": {
+        "coordinates": [
+          -71.379183,
+          41.829203
+        ],
+        "type": "Point"
+      },
+      "id": "5cdb259db4328f7d91f9b75bfd7b3e62"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "seamark:type": "obstruction"
+      },
+      "geometry": {
+        "coordinates": [
+          -71.384114,
+          41.821045
+        ],
+        "type": "Point"
+      },
+      "id": "5d04759bc705c91577ff983680d32c98"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "seamark:type": "obstruction"
+      },
+      "geometry": {
+        "coordinates": [
+          -71.393665,
+          41.813333
+        ],
+        "type": "Point"
+      },
+      "id": "61f72b67f6c631da078857be21832a0c"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "seamark:type": "obstruction"
+      },
+      "geometry": {
+        "coordinates": [
+          -71.385175,
+          41.820621
+        ],
+        "type": "Point"
+      },
+      "id": "6898a72ad5bdf31bbf753468cc909f69"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "seamark:type": "obstruction"
+      },
+      "geometry": {
+        "coordinates": [
+          -71.39402,
+          41.813185
+        ],
+        "type": "Point"
+      },
+      "id": "68ab2a5225ee26a0e258966daa87c282"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "type": "official"
+      },
+      "geometry": {
+        "coordinates": [
+          -71.377764,
+          41.832462
+        ],
+        "type": "Point"
+      },
+      "id": "78133517ca90514a7242b2e7d9931290"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "seamark:type": "pylon"
+      },
+      "geometry": {
+        "coordinates": [
+          -71.37851,
+          41.829293
+        ],
+        "type": "Point"
+      },
+      "id": "7da28a1a66670c6d0433f7371a765a1b"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "seamark:type": "wreck"
+      },
+      "geometry": {
+        "coordinates": [
+          [
+            [
+              -71.394588,
+              41.8137
+            ],
+            [
+              -71.394571,
+              41.813653
+            ],
+            [
+              -71.394468,
+              41.813574
+            ],
+            [
+              -71.394257,
+              41.81347
+            ],
+            [
+              -71.394201,
+              41.813513
+            ],
+            [
+              -71.39436,
+              41.813628
+            ],
+            [
+              -71.394502,
+              41.813692
+            ],
+            [
+              -71.394577,
+              41.813707
+            ],
+            [
+              -71.394588,
+              41.8137
+            ]
+          ]
+        ],
+        "type": "Polygon"
+      },
+      "id": "8085762acdae5d5f277463a3ddc9fc7b"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "seamark:type": "obstruction"
+      },
+      "geometry": {
+        "coordinates": [
+          -71.393857,
+          41.813263
+        ],
+        "type": "Point"
+      },
+      "id": "83aa57b7629db32a9ae9885ea924d2d9"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "seamark:type": "buoy_lateral",
+        "seamark:buoy_lateral:category": "starboard",
+        "seamark:buoy_lateral:colour": "red",
+        "seamark:buoy_lateral:shape": "conical",
+        "seamark:name": "2N",
+        "seamark:buoy_lateral:system": "iala-b"
+      },
+      "geometry": {
+        "coordinates": [
+          -71.395842,
+          41.814146
+        ],
+        "type": "Point"
+      },
+      "id": "83de19c8efb492e39dbc78fe88ebef41"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "seamark:type": "pylon"
+      },
+      "geometry": {
+        "coordinates": [
+          -71.378518,
+          41.829161
+        ],
+        "type": "Point"
+      },
+      "id": "84ff2bc2b41e387c658d9745d99f8b38"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "type": "official"
+      },
+      "geometry": {
+        "coordinates": [
+          -71.385321,
+          41.82363
+        ],
+        "type": "Point"
+      },
+      "id": "9150839814625701bf003febaad1ad85"
+    },
+    {
+      "type": "Feature",
+      "properties": {},
+      "geometry": {
+        "coordinates": [
+          -71.395181,
+          41.813944
+        ],
+        "type": "Point"
+      },
+      "id": "9473e7a922bfe398197b55bfef924158"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "type": "official"
+      },
+      "geometry": {
+        "coordinates": [
+          -71.376168,
+          41.836808
+        ],
+        "type": "Point"
+      },
+      "id": "994c974dd129c58bb4f0cd37368a085e"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "type": "official"
+      },
+      "geometry": {
+        "coordinates": [
+          -71.388111,
+          41.815954
+        ],
+        "type": "Point"
+      },
+      "id": "9b2416235218ee835845c493e938dc94"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "seamark:type": "pylon"
+      },
+      "geometry": {
+        "coordinates": [
+          -71.379628,
+          41.829465
+        ],
+        "type": "Point"
+      },
+      "id": "9ce6c9e6a13368ad7a64ee2baafe0d76"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "seamark:type": "obstruction"
+      },
+      "geometry": {
+        "coordinates": [
+          -71.395014,
+          41.812818
+        ],
+        "type": "Point"
+      },
+      "id": "a145dbd40d7aca349ae66a15014fb658"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "seamark:type": "obstruction"
+      },
+      "geometry": {
+        "coordinates": [
+          -71.394975,
+          41.812793
+        ],
+        "type": "Point"
+      },
+      "id": "ab11c349a028e9f0ee6c350f0eff83d2"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "seamark:type": "obstruction"
+      },
+      "geometry": {
+        "coordinates": [
+          -71.395014,
+          41.812808
+        ],
+        "type": "Point"
+      },
+      "id": "b0d15cdc68491ff5a1655c5015a0c43b"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "seamark:type": "buoy_lateral",
+        "seamark:buoy_lateral:category": "starboard",
+        "seamark:buoy_lateral:colour": "red",
+        "seamark:buoy_lateral:shape": "conical",
+        "seamark:name": "6N",
+        "seamark:buoy_lateral:system": "iala-b"
+      },
+      "geometry": {
+        "coordinates": [
+          -71.392053,
+          41.816626
+        ],
+        "type": "Point"
+      },
+      "id": "b3bc1d237e9cab63e64fe04cbfd0015d"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "seamark:type": "obstruction"
+      },
+      "geometry": {
+        "coordinates": [
+          -71.394581,
+          41.812989
+        ],
+        "type": "Point"
+      },
+      "id": "bd9893e3e95eadd59311dd61fc43188b"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "seamark:type": "pylon"
+      },
+      "geometry": {
+        "coordinates": [
+          -71.379634,
+          41.829337
+        ],
+        "type": "Point"
+      },
+      "id": "c582e9314549e8650b867516e2669158"
+    },
+    {
+      "type": "Feature",
+      "properties": {},
+      "geometry": {
+        "coordinates": [
+          -71.394147,
+          41.812251
+        ],
+        "type": "Point"
+      },
+      "id": "c852d0a8770830c525dbca3f956fe8d1"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "seamark:type": "obstruction"
+      },
+      "geometry": {
+        "coordinates": [
+          -71.394983,
+          41.812789
+        ],
+        "type": "Point"
+      },
+      "id": "caca5eff940cfe685d943b2f10c11ec1"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "type": "official"
+      },
+      "geometry": {
+        "coordinates": [
+          -71.381116,
+          41.78496
+        ],
+        "type": "Point"
+      },
+      "id": "d959da6f27eb828fe8245a28fe6d6766"
+    },
+    {
+      "type": "Feature",
+      "properties": {},
+      "geometry": {
+        "coordinates": [
+          -71.394776,
+          41.813772
+        ],
+        "type": "Point"
+      },
+      "id": "da42e7c5b09dbc7f7df381cd533dde13"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "seamark:type": "pylon"
+      },
+      "geometry": {
+        "coordinates": [
+          -71.379172,
+          41.829452
+        ],
+        "type": "Point"
+      },
+      "id": "db2d860d0835cdd75eb4c80c6157f0b6"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "type": "official"
+      },
+      "geometry": {
+        "coordinates": [
+          -71.388512,
+          41.816847
+        ],
+        "type": "Point"
+      },
+      "id": "dc4b23bc6dd1a8dd1455f17a1e271f2f"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "type": "race-path"
+      },
+      "geometry": {
+        "coordinates": [
+          [
+            -71.37763,
+            41.832499
+          ],
+          [
+            -71.38072,
+            41.82705
+          ],
+          [
+            -71.383949,
+            41.823442
+          ],
+          [
+            -71.387004,
+            41.819364
+          ],
+          [
+            -71.387272,
+            41.818715
+          ],
+          [
+            -71.388413,
+            41.816757
+          ],
+          [
+            -71.392038,
+            41.816073
+          ],
+          [
+            -71.395269,
+            41.811096
+          ],
+          [
+            -71.378925,
+            41.788098
+          ],
+          [
+            -71.374115,
+            41.777254
+          ]
+        ],
+        "type": "LineString"
+      },
+      "id": "e09763cd1d5ca117254fefb489c885dc"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "seamark:type": "obstruction"
+      },
+      "geometry": {
+        "coordinates": [
+          -71.395004,
+          41.812836
+        ],
+        "type": "Point"
+      },
+      "id": "ea2e1bad992a8c27fb7e35fdc5acb17a"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "seamark:type": "obstruction"
+      },
+      "geometry": {
+        "coordinates": [
+          -71.394995,
+          41.812797
+        ],
+        "type": "Point"
+      },
+      "id": "eaab0b10f808af0962e6f656d1afc482"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "seamark:type": "wreck"
+      },
+      "geometry": {
+        "coordinates": [
+          [
+            [
+              -71.39282,
+              41.815418
+            ],
+            [
+              -71.392871,
+              41.815354
+            ],
+            [
+              -71.392601,
+              41.815219
+            ],
+            [
+              -71.392535,
+              41.815195
+            ],
+            [
+              -71.392497,
+              41.815191
+            ],
+            [
+              -71.392468,
+              41.815201
+            ],
+            [
+              -71.392471,
+              41.815226
+            ],
+            [
+              -71.392494,
+              41.815257
+            ],
+            [
+              -71.392546,
+              41.815289
+            ],
+            [
+              -71.39282,
+              41.815418
+            ]
+          ]
+        ],
+        "type": "Polygon"
+      },
+      "id": "f8fbf1d8cc27ea695aae40c4bdba3529"
+    },
+    {
+      "type": "Feature",
+      "properties": {},
+      "geometry": {
+        "coordinates": [
+          -71.39493,
+          41.813809
+        ],
+        "type": "Point"
+      },
+      "id": "fdcd9bd3bed455298d0bb9a4454f496b"
+    }
+  ],
+  "type": "FeatureCollection"
+}
