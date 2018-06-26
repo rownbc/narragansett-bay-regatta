@@ -1,0 +1,938 @@
+{
+    "version": 8,
+    "name": "Extended Light",
+    "metadata": {
+        "mapbox:autocomposite": true,
+        "mapbox:type": "default",
+        "mapbox:groups": {
+            "f8ba9ec5a3d0bd6a658ed20294abaa3c": {
+                "name": "Race Group",
+                "collapsed": true
+            },
+            "d54f23b856682d638b63323515f84fc7": {
+                "name": "OpenSeaMaps",
+                "collapsed": false
+            },
+            "a8110031bde37dab3e64e1ae263e4a32": {
+                "name": "Group"
+            },
+            "4425b8d80a552df8b5f5e76977ea38cd": {
+                "name": "Group",
+                "collapsed": false
+            },
+            "9660b78ab11e2d49e6de818f56a13ef8": {
+                "name": "Boundries",
+                "collapsed": false
+            },
+            "1444933837268.9458": {
+                "name": "Contour lines",
+                "collapsed": false
+            }
+        },
+        "mapbox:trackposition": false,
+        "mapbox:sdk-support": {
+            "js": "latest",
+            "android": "latest",
+            "ios": "latest"
+        }
+    },
+    "center": [
+        -71.38047912877954,
+        41.804680476624355
+    ],
+    "zoom": 13.069841761684845,
+    "bearing": 0,
+    "pitch": 0,
+    "sources": {
+        "composite": {
+            "url": "mapbox://mapbox.mapbox-streets-v7,mapbox.mapbox-terrain-v2,breckwagner.cjirlo9m003ru2wpedkrr3442-7ina1",
+            "type": "vector"
+        }
+    },
+    "sprite": "mapbox://sprites/breckwagner/cjiru43j359ja2rnbm3kmu3ot",
+    "glyphs": "mapbox://fonts/breckwagner/{fontstack}/{range}.pbf",
+    "layers": [
+        {
+            "id": "background",
+            "type": "background",
+            "layout": {},
+            "paint": {
+                "background-color": "#f2eee8"
+            }
+        },
+        {
+            "id": "water",
+            "type": "fill",
+            "metadata": {
+                "mapbox:group": "a8110031bde37dab3e64e1ae263e4a32"
+            },
+            "source": "composite",
+            "source-layer": "water",
+            "layout": {
+                "visibility": "visible"
+            },
+            "paint": {
+                "fill-color": "hsl(179, 84%, 91%)"
+            }
+        },
+        {
+            "id": "landuse",
+            "type": "fill",
+            "metadata": {
+                "mapbox:group": "a8110031bde37dab3e64e1ae263e4a32"
+            },
+            "source": "composite",
+            "source-layer": "landuse",
+            "layout": {
+                "visibility": "visible"
+            },
+            "paint": {
+                "fill-color": "#e6dfd0"
+            }
+        },
+        {
+            "id": "landuse-overlay",
+            "type": "fill",
+            "metadata": {
+                "mapbox:group": "a8110031bde37dab3e64e1ae263e4a32"
+            },
+            "source": "composite",
+            "source-layer": "landuse_overlay",
+            "layout": {
+                "visibility": "visible"
+            },
+            "paint": {
+                "fill-color": "#e6dfd0"
+            }
+        },
+        {
+            "id": "contour-line copy",
+            "type": "line",
+            "metadata": {
+                "mapbox:group": "1444933837268.9458"
+            },
+            "source": "composite",
+            "source-layer": "contour",
+            "minzoom": 10,
+            "filter": [
+                "all",
+                [
+                    "!=",
+                    "index",
+                    -1
+                ],
+                [
+                    "!in",
+                    "index",
+                    10,
+                    2,
+                    5
+                ]
+            ],
+            "layout": {},
+            "paint": {
+                "line-offset": [
+                    "interpolate",
+                    [
+                        "linear"
+                    ],
+                    [
+                        "zoom"
+                    ],
+                    13,
+                    1,
+                    16,
+                    2
+                ],
+                "line-color": "hsl(100, 33%, 22%)",
+                "line-opacity": [
+                    "interpolate",
+                    [
+                        "linear"
+                    ],
+                    [
+                        "zoom"
+                    ],
+                    12,
+                    0,
+                    14,
+                    0.6
+                ]
+            }
+        },
+        {
+            "id": "Seawall",
+            "type": "line",
+            "metadata": {
+                "mapbox:group": "1444933837268.9458"
+            },
+            "source": "composite",
+            "source-layer": "contour",
+            "filter": [
+                "==",
+                "index",
+                -1
+            ],
+            "layout": {},
+            "paint": {
+                "line-opacity": [
+                    "interpolate",
+                    [
+                        "linear"
+                    ],
+                    [
+                        "zoom"
+                    ],
+                    9,
+                    0,
+                    10,
+                    0.6,
+                    11,
+                    0.6,
+                    12,
+                    0.6,
+                    15,
+                    0
+                ],
+                "line-color": "hsl(100, 33%, 22%)",
+                "line-width": [
+                    "interpolate",
+                    [
+                        "linear"
+                    ],
+                    [
+                        "zoom"
+                    ],
+                    13,
+                    1,
+                    14,
+                    0
+                ]
+            }
+        },
+        {
+            "id": "nbc-bay-regatta-1",
+            "type": "line",
+            "metadata": {
+                "mapbox:group": "f8ba9ec5a3d0bd6a658ed20294abaa3c"
+            },
+            "source": "composite",
+            "source-layer": "NBC_Bay_Regatta-1",
+            "filter": [
+                "all",
+                [
+                    "==",
+                    "$type",
+                    "LineString"
+                ],
+                [
+                    "==",
+                    "type",
+                    "race-path"
+                ]
+            ],
+            "layout": {
+                "line-cap": "round",
+                "line-join": "round"
+            },
+            "paint": {
+                "line-dasharray": [
+                    3,
+                    3
+                ]
+            }
+        },
+        {
+            "id": "lines",
+            "type": "line",
+            "metadata": {
+                "mapbox:group": "f8ba9ec5a3d0bd6a658ed20294abaa3c"
+            },
+            "source": "composite",
+            "source-layer": "NBC_Bay_Regatta-1",
+            "filter": [
+                "all",
+                [
+                    "==",
+                    "$type",
+                    "LineString"
+                ],
+                [
+                    "in",
+                    "type",
+                    "finish-line",
+                    "start-line"
+                ]
+            ],
+            "layout": {
+                "visibility": "visible"
+            },
+            "paint": {
+                "line-gap-width": [
+                    "interpolate",
+                    [
+                        "cubic-bezier",
+                        0.5,
+                        0,
+                        0,
+                        1
+                    ],
+                    [
+                        "zoom"
+                    ],
+                    12,
+                    0,
+                    22,
+                    10
+                ]
+            }
+        },
+        {
+            "id": "lines copy",
+            "type": "symbol",
+            "metadata": {
+                "mapbox:group": "f8ba9ec5a3d0bd6a658ed20294abaa3c"
+            },
+            "source": "composite",
+            "source-layer": "NBC_Bay_Regatta-1",
+            "filter": [
+                "all",
+                [
+                    "==",
+                    "$type",
+                    "LineString"
+                ],
+                [
+                    "in",
+                    "type",
+                    "finish-line",
+                    "start-line"
+                ]
+            ],
+            "layout": {
+                "text-field": [
+                    "match",
+                    [
+                        "get",
+                        "type"
+                    ],
+                    "start-line",
+                    "Start Line",
+                    "finish-line",
+                    "Finish",
+                    ""
+                ],
+                "symbol-placement": "line",
+                "text-size": 8
+            },
+            "paint": {}
+        },
+        {
+            "id": "nbc-bay-regatta-1 (1)",
+            "type": "symbol",
+            "metadata": {
+                "mapbox:group": "f8ba9ec5a3d0bd6a658ed20294abaa3c"
+            },
+            "source": "composite",
+            "source-layer": "NBC_Bay_Regatta-1",
+            "filter": [
+                "all",
+                [
+                    "==",
+                    "$type",
+                    "Point"
+                ],
+                [
+                    "==",
+                    "seamark:type",
+                    "buoy_lateral"
+                ]
+            ],
+            "layout": {
+                "icon-image": "port-8",
+                "text-field": [
+                    "to-string",
+                    [
+                        "get",
+                        "seamark:name"
+                    ]
+                ],
+                "text-anchor": "top-left"
+            },
+            "paint": {
+                "text-color": "hsl(0, 100%, 50%)"
+            }
+        },
+        {
+            "id": "nbc-bay-regatta-1 (2)",
+            "type": "circle",
+            "metadata": {
+                "mapbox:group": "f8ba9ec5a3d0bd6a658ed20294abaa3c"
+            },
+            "source": "composite",
+            "source-layer": "NBC_Bay_Regatta-1",
+            "filter": [
+                "==",
+                "seamark:type",
+                "pylon"
+            ],
+            "layout": {
+                "visibility": "visible"
+            },
+            "paint": {
+                "circle-color": "hsl(0, 31%, 82%)",
+                "circle-stroke-width": [
+                    "interpolate",
+                    [
+                        "linear"
+                    ],
+                    [
+                        "zoom"
+                    ],
+                    11,
+                    0,
+                    22,
+                    1
+                ],
+                "circle-radius": [
+                    "interpolate",
+                    [
+                        "linear"
+                    ],
+                    [
+                        "zoom"
+                    ],
+                    0,
+                    0.01,
+                    16,
+                    2,
+                    22,
+                    30
+                ]
+            }
+        },
+        {
+            "id": "nbc-bay-regatta-1 (3)",
+            "type": "circle",
+            "metadata": {
+                "mapbox:group": "f8ba9ec5a3d0bd6a658ed20294abaa3c"
+            },
+            "source": "composite",
+            "source-layer": "NBC_Bay_Regatta-1",
+            "filter": [
+                "==",
+                "type",
+                "official"
+            ],
+            "layout": {
+                "visibility": "visible"
+            },
+            "paint": {}
+        },
+        {
+            "id": "Wrecks",
+            "type": "fill",
+            "metadata": {
+                "mapbox:group": "d54f23b856682d638b63323515f84fc7"
+            },
+            "source": "composite",
+            "source-layer": "NBC_Bay_Regatta-1",
+            "filter": [
+                "all",
+                [
+                    "==",
+                    "$type",
+                    "Polygon"
+                ],
+                [
+                    "==",
+                    "seamark:type",
+                    "wreck"
+                ]
+            ],
+            "layout": {},
+            "paint": {
+                "fill-color": [
+                    "case",
+                    [
+                        "==",
+                        [
+                            "get",
+                            "seamark:wreck:category"
+                        ],
+                        "hull_showing"
+                    ],
+                    "hsl(57, 59%, 57%)",
+                    "hsl(88, 68%, 47%)"
+                ],
+                "fill-opacity": [
+                    "case",
+                    [
+                        "==",
+                        [
+                            "get",
+                            "seamark:wreck:category"
+                        ],
+                        "hull_showing"
+                    ],
+                    1,
+                    0.05
+                ]
+            }
+        },
+        {
+            "id": "Wrecks copy",
+            "type": "line",
+            "metadata": {
+                "mapbox:group": "d54f23b856682d638b63323515f84fc7"
+            },
+            "source": "composite",
+            "source-layer": "NBC_Bay_Regatta-1",
+            "filter": [
+                "all",
+                [
+                    "==",
+                    "$type",
+                    "Polygon"
+                ],
+                [
+                    "==",
+                    "seamark:type",
+                    "wreck"
+                ]
+            ],
+            "layout": {
+                "line-join": "round"
+            },
+            "paint": {
+                "line-dasharray": [
+                    1,
+                    1
+                ],
+                "line-opacity": 0.5,
+                "line-width": 1
+            }
+        },
+        {
+            "id": "obstruction",
+            "type": "symbol",
+            "metadata": {
+                "mapbox:group": "d54f23b856682d638b63323515f84fc7"
+            },
+            "source": "composite",
+            "source-layer": "NBC_Bay_Regatta-1",
+            "filter": [
+                "==",
+                "seamark:type",
+                "obstruction"
+            ],
+            "layout": {
+                "icon-image": "obstruction",
+                "icon-size": [
+                    "interpolate",
+                    [
+                        "linear"
+                    ],
+                    [
+                        "zoom"
+                    ],
+                    13,
+                    0,
+                    14,
+                    1,
+                    22,
+                    2
+                ]
+            },
+            "paint": {}
+        },
+        {
+            "id": "admin",
+            "type": "line",
+            "metadata": {
+                "mapbox:group": "9660b78ab11e2d49e6de818f56a13ef8"
+            },
+            "source": "composite",
+            "source-layer": "admin",
+            "filter": [
+                "all",
+                [
+                    "==",
+                    "$type",
+                    "LineString"
+                ],
+                [
+                    "==",
+                    "maritime",
+                    1
+                ]
+            ],
+            "layout": {},
+            "paint": {
+                "line-opacity": [
+                    "interpolate",
+                    [
+                        "linear"
+                    ],
+                    [
+                        "zoom"
+                    ],
+                    0,
+                    0.5,
+                    8,
+                    0
+                ]
+            }
+        },
+        {
+            "id": "admin copy",
+            "type": "line",
+            "metadata": {
+                "mapbox:group": "9660b78ab11e2d49e6de818f56a13ef8"
+            },
+            "source": "composite",
+            "source-layer": "admin",
+            "maxzoom": 8,
+            "filter": [
+                "all",
+                [
+                    "==",
+                    "$type",
+                    "LineString"
+                ],
+                [
+                    "==",
+                    "admin_level",
+                    2
+                ]
+            ],
+            "layout": {
+                "visibility": "visible"
+            },
+            "paint": {
+                "line-dasharray": [
+                    "literal",
+                    [
+                        0,
+                        0
+                    ]
+                ]
+            }
+        },
+        {
+            "id": "admin copy 1",
+            "type": "line",
+            "metadata": {
+                "mapbox:group": "9660b78ab11e2d49e6de818f56a13ef8"
+            },
+            "source": "composite",
+            "source-layer": "admin",
+            "filter": [
+                "all",
+                [
+                    "==",
+                    "$type",
+                    "LineString"
+                ],
+                [
+                    "==",
+                    "admin_level",
+                    4
+                ]
+            ],
+            "layout": {
+                "visibility": "visible"
+            },
+            "paint": {
+                "line-dasharray": [
+                    "literal",
+                    [
+                        2,
+                        2
+                    ]
+                ],
+                "line-opacity": 0.15
+            }
+        },
+        {
+            "id": "road",
+            "type": "line",
+            "metadata": {
+                "mapbox:group": "4425b8d80a552df8b5f5e76977ea38cd"
+            },
+            "source": "composite",
+            "source-layer": "road",
+            "filter": [
+                "in",
+                "class",
+                "primary",
+                "secondary",
+                "street"
+            ],
+            "layout": {
+                "visibility": "visible"
+            },
+            "paint": {
+                "line-gap-width": [
+                    "interpolate",
+                    [
+                        "exponential",
+                        1.5
+                    ],
+                    [
+                        "zoom"
+                    ],
+                    12,
+                    1,
+                    18,
+                    18
+                ],
+                "line-width": [
+                    "interpolate",
+                    [
+                        "exponential",
+                        1.5
+                    ],
+                    [
+                        "zoom"
+                    ],
+                    11,
+                    0.5,
+                    18,
+                    2
+                ],
+                "line-opacity": [
+                    "interpolate",
+                    [
+                        "cubic-bezier",
+                        0.5,
+                        0,
+                        0,
+                        0.5
+                    ],
+                    [
+                        "zoom"
+                    ],
+                    11,
+                    0,
+                    13,
+                    1
+                ],
+                "line-color": "#999999"
+            }
+        },
+        {
+            "id": "road copy",
+            "type": "line",
+            "metadata": {
+                "mapbox:group": "4425b8d80a552df8b5f5e76977ea38cd"
+            },
+            "source": "composite",
+            "source-layer": "road",
+            "filter": [
+                "in",
+                "class",
+                "primary",
+                "secondary",
+                "street"
+            ],
+            "layout": {
+                "visibility": "visible"
+            },
+            "paint": {
+                "line-color": "#f2eee8",
+                "line-width": [
+                    "interpolate",
+                    [
+                        "exponential",
+                        1.5
+                    ],
+                    [
+                        "zoom"
+                    ],
+                    11,
+                    0.5,
+                    18,
+                    18
+                ],
+                "line-opacity": [
+                    "interpolate",
+                    [
+                        "cubic-bezier",
+                        0.5,
+                        0,
+                        0,
+                        0.5
+                    ],
+                    [
+                        "zoom"
+                    ],
+                    11,
+                    0,
+                    13,
+                    1
+                ]
+            }
+        },
+        {
+            "id": "motorway-coridor",
+            "type": "line",
+            "metadata": {
+                "mapbox:group": "4425b8d80a552df8b5f5e76977ea38cd"
+            },
+            "source": "composite",
+            "source-layer": "road",
+            "filter": [
+                "in",
+                "class",
+                "motorway",
+                "motorway_link"
+            ],
+            "layout": {
+                "visibility": "visible"
+            },
+            "paint": {
+                "line-gap-width": [
+                    "interpolate",
+                    [
+                        "exponential",
+                        1.5
+                    ],
+                    [
+                        "zoom"
+                    ],
+                    12,
+                    1,
+                    18,
+                    18
+                ],
+                "line-width": [
+                    "interpolate",
+                    [
+                        "exponential",
+                        1.5
+                    ],
+                    [
+                        "zoom"
+                    ],
+                    11,
+                    0.5,
+                    18,
+                    2
+                ],
+                "line-opacity": [
+                    "interpolate",
+                    [
+                        "cubic-bezier",
+                        0.5,
+                        0,
+                        0,
+                        0.5
+                    ],
+                    [
+                        "zoom"
+                    ],
+                    5,
+                    0,
+                    6,
+                    1
+                ],
+                "line-color": "hsl(0, 0%, 60%)"
+            }
+        },
+        {
+            "id": "motorway",
+            "type": "line",
+            "metadata": {
+                "mapbox:group": "4425b8d80a552df8b5f5e76977ea38cd"
+            },
+            "source": "composite",
+            "source-layer": "road",
+            "filter": [
+                "in",
+                "class",
+                "motorway",
+                "motorway_link"
+            ],
+            "layout": {
+                "visibility": "visible"
+            },
+            "paint": {
+                "line-color": "#f2eee8",
+                "line-width": [
+                    "interpolate",
+                    [
+                        "exponential",
+                        1.5
+                    ],
+                    [
+                        "zoom"
+                    ],
+                    11,
+                    0.5,
+                    18,
+                    18
+                ],
+                "line-opacity": [
+                    "interpolate",
+                    [
+                        "cubic-bezier",
+                        0.5,
+                        0,
+                        0,
+                        0.5
+                    ],
+                    [
+                        "zoom"
+                    ],
+                    5,
+                    0,
+                    6,
+                    1
+                ]
+            }
+        },
+        {
+            "id": "place-label",
+            "type": "symbol",
+            "source": "composite",
+            "source-layer": "place_label",
+            "layout": {
+                "text-font": [
+                    "Raleway Light Italic",
+                    "Arial Unicode MS Regular"
+                ],
+                "text-field": [
+                    "to-string",
+                    [
+                        "get",
+                        "name"
+                    ]
+                ]
+            },
+            "paint": {
+                "text-halo-color": "hsl(0, 0%, 100%)",
+                "text-halo-width": 1,
+                "text-halo-blur": 1
+            }
+        },
+        {
+            "id": "building",
+            "type": "fill",
+            "source": "composite",
+            "source-layer": "building",
+            "layout": {
+                "visibility": "visible"
+            },
+            "paint": {
+                "fill-pattern": "user-circle"
+            }
+        }
+    ],
+    "created": "2018-06-23T20:06:06.713Z",
+    "id": "cjiru43j359ja2rnbm3kmu3ot",
+    "modified": "2018-06-26T12:56:32.939Z",
+    "owner": "breckwagner",
+    "visibility": "private",
+    "draft": false
+}
