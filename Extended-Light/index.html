@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta name='viewport' content='initial-scale=1,maximum-scale=1,user-scalable=no' />
+  <meta charset='utf-8' />
+  <title>Extended Light | Mapbox</title>
+
+
+  <link href='https://api.mapbox.com/mapbox-gl-js/v0.44.1/mapbox-gl.css' rel='stylesheet' />
+  <script src='https://api.mapbox.com/mapbox-gl-js/v0.44.1/mapbox-gl.js'></script>
+  <script src='https://api.mapbox.com/mapbox-gl-js/plugins/mapbox-gl-instrumentile/v3.0.0/mapbox-gl-instrumentile.js'></script>
+  <link href='https://api.mapbox.com/mapbox.js/v2.3.0/mapbox.css' rel='stylesheet' />
+  <script src='https://api.mapbox.com/mapbox.js/v2.3.0/mapbox.js'></script>
+  <script src='https://api.mapbox.com/mapbox.js/plugins/leaflet-hash/v0.2.1/leaflet-hash.js'></script>
+  <style>
+    html,
+    body,
+    #map {
+      width: 100%;
+      height: 100%;
+      margin: 0;
+      padding: 0;
+    }
+
+    #map {
+      position: absolute;
+      top: 0;
+      bottom: 0;
+    }
+
+    .mapboxgl-ctrl-nav>a {
+      border-color: rgba(0, 0, 0, .1);
+    }
+
+    .infobox {
+      width: 270px;
+      position: absolute;
+      top: 0;
+      right: 0;
+      border-bottom-left-radius: 3px;
+      box-shadow: 0 0 25px 0 rgba(0, 0, 0, 0.15);
+      background: white;
+      /* System sans-serif fonts */
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+      font-size: 12px;
+      line-height: 20px;
+      color: #273d56;
+      /* gray-dark */
+    }
+
+    .infobox-text {
+      margin-right: 80px;
+      padding: 20px;
+    }
+
+    .infobox-heading {
+      font-size: 15px;
+      line-height: 20px;
+      font-weight: bold;
+    }
+
+    .infobox-mapbox {
+      background: #f4f7fb;
+      /* gray-faint */
+      position: absolute;
+      width: 80px;
+      height: 80px;
+      top: 0;
+      right: 0;
+    }
+
+    .mapbox-mark {
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      background-size: 40px 40px;
+      background-repeat: no-repeat;
+      background-position: center center;
+      /* Mapbox mark, inlined */
+      /* fill is #607d9c, gray */
+      background-image: url("data:image/svg+xml,%0A%3Csvg width='179' height='179' viewBox='0 0 179 179' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M89.1.8C39.9.8 0 40.7 0 89.9 0 139.1 39.9 179 89.1 179c49.2 0 89.1-39.9 89.1-89.1C178.2 40.7 138.3.8 89.1.8zm9.2 34.6c11.4.3 22.9 4.8 31.7 13.7 17.7 17.7 18.3 45.7 1.4 62.7-30.5 30.5-84.8 20.7-84.8 20.7s-9.8-54.3 20.7-84.8c8.5-8.4 19.7-12.5 31-12.3zm1 17.6l-8.7 18-17.9 8.7 17.9 8.7 8.7 18 8.8-18 17.9-8.7-17.9-8.7-8.8-18z' fill='%23607d9c'/%3E%3C/svg%3E%0A");
+    }
+
+    @media only screen and (max-width:640px) {
+      .leaflet-left .leaflet-control,
+      .mapboxgl-ctrl-top-left .mapboxgl-ctrl {
+        margin-top: 70px;
+      }
+      .infobox {
+        width: 100%;
+        height: 60px;
+        border-bottom-left-radius: 0;
+      }
+      .infobox-text {
+        height: 40px;
+        padding: 10px 20px;
+        overflow: auto;
+        margin-right: 60px;
+      }
+      .infobox-mapbox {
+        width: 60px;
+        height: 60px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <div id='map'></div>
+  <script>
+    (function() {
+      'use strict';
+
+      if (mapboxgl.supported()) {
+        if (!window.instrumentile) {
+          renderMapboxGL()
+        } else {
+          instrumentile.supportsWebWorkerPerformanceCollection(function(e, supported) {
+            renderMapboxGL(supported);
+          });
+        }
+      } else {
+        renderMapboxJS();
+      }
+
+      function renderMapboxGL(supported) {
+        mapboxgl.accessToken = 'pk.eyJ1IjoiYnJlY2t3YWduZXIiLCJhIjoiSkJJV1dTcyJ9.pEesBXiXWj1N7lJ85LLt3A';
+        mapboxgl.config.API_URL = 'https://api.mapbox.com';
+
+        window.map = new mapboxgl.Map({
+          container: 'map',
+          style: "./style.json",
+          hash: true,
+          scrollZoom: true,
+          collectResourceTiming: supported
+        }).addControl(new mapboxgl.NavigationControl(), 'top-left');
+
+        var instrumentileOpts = {
+          token: 'pk.eyJ1IjoiYnJlY2t3YWduZXIiLCJhIjoiSkJJV1dTcyJ9.pEesBXiXWj1N7lJ85LLt3A',
+          source: 'mapbox-studio-share'
+        };
+        window.instrumentileRef = new instrumentile(window.map, instrumentileOpts);
+      }
+
+      function renderMapboxJS() {
+        L.mapbox.accessToken = 'pk.eyJ1IjoiYnJlY2t3YWduZXIiLCJhIjoiSkJJV1dTcyJ9.pEesBXiXWj1N7lJ85LLt3A';
+        L.mapbox.config.HTTPS_URL = 'https://api.mapbox.com';
+        L.mapbox.config.FORCE_HTTPS = true;
+
+        window.map = L.mapbox.map('map', '', {
+          scrollWheelZoom: true,
+          minZoom: 1
+        });
+
+        L.mapbox.styleLayer('mapbox://styles/breckwagner/cjiru43j359ja2rnbm3kmu3ot').addTo(map);
+
+        if (window.location.hash) {
+          window.location.hash = window.location.hash
+            .substring(1).split('/').slice(0, 3).join('/');
+        } else {
+          map.setView([41.804680476624355, -71.38047912877954], Math.round(13.069841761684845 + 1));
+        }
+
+        var hash = new L.hash(map);
+
+        hash.parseHash = function(hash) {
+          if (hash.indexOf('#') === 0) {
+            hash = hash.substr(1);
+          }
+          var args = hash.split('/');
+          if (args.length == 3) {
+            var zoom = parseInt(args[0], 10) + 1, // Account for zoomOffset
+              lat = parseFloat(args[1]),
+              lon = parseFloat(args[2]);
+            if (isNaN(zoom) || isNaN(lat) || isNaN(lon)) {
+              return false;
+            } else {
+              return {
+                center: new L.LatLng(lat, lon),
+                zoom: zoom
+              };
+            }
+          } else {
+            return false;
+          }
+        }
+
+        hash.formatHash = function(map) {
+          var center = map.getCenter(),
+            zoom = map.getZoom() - 1, // Account for zoomOffset
+            precision = Math.max(0, Math.ceil(Math.log(zoom) / Math.LN2));
+
+          return '#' + [zoom,
+            center.lat.toFixed(precision),
+            center.lng.toFixed(precision)
+          ].join('/');
+        }
+      }
+
+    })();
+  </script>
+
+</body>
+
+</html>
