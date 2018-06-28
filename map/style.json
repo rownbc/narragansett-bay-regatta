@@ -7,7 +7,7 @@
         "mapbox:groups": {
             "f8ba9ec5a3d0bd6a658ed20294abaa3c": {
                 "name": "Race Group",
-                "collapsed": true
+                "collapsed": false
             },
             "d54f23b856682d638b63323515f84fc7": {
                 "name": "OpenSeaMaps",
@@ -37,10 +37,10 @@
         }
     },
     "center": [
-        -71.38047912877954,
-        41.804680476624355
+        -71.37333328529212,
+        41.808299940371626
     ],
-    "zoom": 13.069841761684845,
+    "zoom": 12.73299621849244,
     "bearing": 0,
     "pitch": 0,
     "sources": {
@@ -211,225 +211,6 @@
             }
         },
         {
-            "id": "nbc-bay-regatta-1",
-            "type": "line",
-            "metadata": {
-                "mapbox:group": "f8ba9ec5a3d0bd6a658ed20294abaa3c"
-            },
-            "source": "composite",
-            "source-layer": "NBC_Bay_Regatta-1",
-            "filter": [
-                "all",
-                [
-                    "==",
-                    "$type",
-                    "LineString"
-                ],
-                [
-                    "==",
-                    "type",
-                    "race-path"
-                ]
-            ],
-            "layout": {
-                "line-cap": "round",
-                "line-join": "round"
-            },
-            "paint": {
-                "line-dasharray": [
-                    3,
-                    3
-                ]
-            }
-        },
-        {
-            "id": "lines",
-            "type": "line",
-            "metadata": {
-                "mapbox:group": "f8ba9ec5a3d0bd6a658ed20294abaa3c"
-            },
-            "source": "composite",
-            "source-layer": "NBC_Bay_Regatta-1",
-            "filter": [
-                "all",
-                [
-                    "==",
-                    "$type",
-                    "LineString"
-                ],
-                [
-                    "in",
-                    "type",
-                    "finish-line",
-                    "start-line"
-                ]
-            ],
-            "layout": {
-                "visibility": "visible"
-            },
-            "paint": {
-                "line-gap-width": [
-                    "interpolate",
-                    [
-                        "cubic-bezier",
-                        0.5,
-                        0,
-                        0,
-                        1
-                    ],
-                    [
-                        "zoom"
-                    ],
-                    12,
-                    0,
-                    22,
-                    10
-                ]
-            }
-        },
-        {
-            "id": "lines copy",
-            "type": "symbol",
-            "metadata": {
-                "mapbox:group": "f8ba9ec5a3d0bd6a658ed20294abaa3c"
-            },
-            "source": "composite",
-            "source-layer": "NBC_Bay_Regatta-1",
-            "filter": [
-                "all",
-                [
-                    "==",
-                    "$type",
-                    "LineString"
-                ],
-                [
-                    "in",
-                    "type",
-                    "finish-line",
-                    "start-line"
-                ]
-            ],
-            "layout": {
-                "text-field": [
-                    "match",
-                    [
-                        "get",
-                        "type"
-                    ],
-                    "start-line",
-                    "Start Line",
-                    "finish-line",
-                    "Finish",
-                    ""
-                ],
-                "symbol-placement": "line",
-                "text-size": 8
-            },
-            "paint": {}
-        },
-        {
-            "id": "nbc-bay-regatta-1 (1)",
-            "type": "symbol",
-            "metadata": {
-                "mapbox:group": "f8ba9ec5a3d0bd6a658ed20294abaa3c"
-            },
-            "source": "composite",
-            "source-layer": "NBC_Bay_Regatta-1",
-            "filter": [
-                "all",
-                [
-                    "==",
-                    "$type",
-                    "Point"
-                ],
-                [
-                    "==",
-                    "seamark:type",
-                    "buoy_lateral"
-                ]
-            ],
-            "layout": {
-                "icon-image": "port-8",
-                "text-field": [
-                    "to-string",
-                    [
-                        "get",
-                        "seamark:name"
-                    ]
-                ],
-                "text-anchor": "top-left"
-            },
-            "paint": {
-                "text-color": "hsl(0, 100%, 50%)"
-            }
-        },
-        {
-            "id": "nbc-bay-regatta-1 (2)",
-            "type": "circle",
-            "metadata": {
-                "mapbox:group": "f8ba9ec5a3d0bd6a658ed20294abaa3c"
-            },
-            "source": "composite",
-            "source-layer": "NBC_Bay_Regatta-1",
-            "filter": [
-                "==",
-                "seamark:type",
-                "pylon"
-            ],
-            "layout": {
-                "visibility": "visible"
-            },
-            "paint": {
-                "circle-color": "hsl(0, 31%, 82%)",
-                "circle-stroke-width": [
-                    "interpolate",
-                    [
-                        "linear"
-                    ],
-                    [
-                        "zoom"
-                    ],
-                    11,
-                    0,
-                    22,
-                    1
-                ],
-                "circle-radius": [
-                    "interpolate",
-                    [
-                        "linear"
-                    ],
-                    [
-                        "zoom"
-                    ],
-                    0,
-                    0.01,
-                    16,
-                    2,
-                    22,
-                    30
-                ]
-            }
-        },
-        {
-            "id": "nbc-bay-regatta-1 (3)",
-            "type": "circle",
-            "metadata": {
-                "mapbox:group": "f8ba9ec5a3d0bd6a658ed20294abaa3c"
-            },
-            "source": "composite",
-            "source-layer": "NBC_Bay_Regatta-1",
-            "filter": [
-                "==",
-                "type",
-                "official"
-            ],
-            "layout": {
-                "visibility": "visible"
-            },
-            "paint": {}
-        },
-        {
             "id": "Wrecks",
             "type": "fill",
             "metadata": {
@@ -527,7 +308,7 @@
                 "obstruction"
             ],
             "layout": {
-                "icon-image": "obstruction",
+                "icon-image": "NChart_ECDIS_Obstruction_Depth",
                 "icon-size": [
                     "interpolate",
                     [
@@ -539,12 +320,41 @@
                     13,
                     0,
                     14,
-                    1,
+                    0.1,
                     22,
-                    2
+                    0.3
                 ]
             },
-            "paint": {}
+            "paint": {
+                "icon-opacity": 0.5
+            }
+        },
+        {
+            "id": "obstruction paths",
+            "type": "line",
+            "metadata": {
+                "mapbox:group": "d54f23b856682d638b63323515f84fc7"
+            },
+            "source": "composite",
+            "source-layer": "NBC_Bay_Regatta-1",
+            "filter": [
+                "all",
+                [
+                    "==",
+                    "$type",
+                    "LineString"
+                ],
+                [
+                    "==",
+                    "seamark:type",
+                    "obstruction"
+                ]
+            ],
+            "layout": {},
+            "paint": {
+                "line-gap-width": 0.5,
+                "line-color": "hsl(0, 31%, 82%)"
+            }
         },
         {
             "id": "admin",
@@ -918,21 +728,702 @@
         },
         {
             "id": "building",
-            "type": "fill",
+            "type": "fill-extrusion",
             "source": "composite",
             "source-layer": "building",
+            "layout": {},
+            "paint": {
+                "fill-extrusion-height": [
+                    "get",
+                    "height"
+                ],
+                "fill-extrusion-pattern": "hatch_36px-2pxSp-0.5pt",
+                "fill-extrusion-base": [
+                    "get",
+                    "min_height"
+                ]
+            }
+        },
+        {
+            "id": "rail",
+            "type": "line",
+            "source": "composite",
+            "source-layer": "road",
+            "filter": [
+                "all",
+                [
+                    "==",
+                    "$type",
+                    "LineString"
+                ],
+                [
+                    "in",
+                    "class",
+                    "major_rail",
+                    "minor_rail"
+                ]
+            ],
+            "layout": {},
+            "paint": {
+                "line-color": "hsl(0, 0%, 80%)",
+                "line-gap-width": 1
+            }
+        },
+        {
+            "id": "rail copy",
+            "type": "line",
+            "source": "composite",
+            "source-layer": "road",
+            "filter": [
+                "all",
+                [
+                    "==",
+                    "$type",
+                    "LineString"
+                ],
+                [
+                    "in",
+                    "class",
+                    "major_rail",
+                    "minor_rail"
+                ]
+            ],
+            "layout": {},
+            "paint": {
+                "line-color": "hsl(0, 0%, 80%)",
+                "line-gap-width": 0,
+                "line-dasharray": [
+                    3,
+                    3
+                ]
+            }
+        },
+        {
+            "id": "rail copy 1",
+            "type": "line",
+            "source": "composite",
+            "source-layer": "NBC_Bay_Regatta-1",
+            "filter": [
+                "all",
+                [
+                    "==",
+                    "$type",
+                    "LineString"
+                ],
+                [
+                    "==",
+                    "type",
+                    "bridge"
+                ]
+            ],
+            "layout": {},
+            "paint": {
+                "line-color": "#444444",
+                "line-gap-width": 2,
+                "line-width": 2
+            }
+        },
+        {
+            "id": "nbc-bay-regatta-1",
+            "type": "line",
+            "source": "composite",
+            "source-layer": "NBC_Bay_Regatta-1",
+            "filter": [
+                "all",
+                [
+                    "==",
+                    "$type",
+                    "LineString"
+                ],
+                [
+                    "==",
+                    "seamark:type",
+                    "pylon"
+                ]
+            ],
             "layout": {
-                "visibility": "visible"
+                "visibility": "visible",
+                "line-cap": "round"
             },
             "paint": {
-                "fill-pattern": "user-circle"
+                "line-gap-width": [
+                    "interpolate",
+                    [
+                        "exponential",
+                        1.2
+                    ],
+                    [
+                        "zoom"
+                    ],
+                    0,
+                    0,
+                    22,
+                    10
+                ]
+            }
+        },
+        {
+            "id": "path",
+            "type": "line",
+            "metadata": {
+                "mapbox:group": "f8ba9ec5a3d0bd6a658ed20294abaa3c"
+            },
+            "source": "composite",
+            "source-layer": "NBC_Bay_Regatta-1",
+            "filter": [
+                "all",
+                [
+                    "==",
+                    "$type",
+                    "LineString"
+                ],
+                [
+                    "all",
+                    [
+                        "!=",
+                        "race-path:class",
+                        "alternate"
+                    ],
+                    [
+                        "==",
+                        "type",
+                        "race-path"
+                    ]
+                ]
+            ],
+            "layout": {
+                "line-cap": "round",
+                "line-join": "round"
+            },
+            "paint": {
+                "line-dasharray": [
+                    3,
+                    3
+                ]
+            }
+        },
+        {
+            "id": "path label",
+            "type": "symbol",
+            "metadata": {
+                "mapbox:group": "f8ba9ec5a3d0bd6a658ed20294abaa3c"
+            },
+            "source": "composite",
+            "source-layer": "NBC_Bay_Regatta-1",
+            "filter": [
+                "all",
+                [
+                    "==",
+                    "$type",
+                    "LineString"
+                ],
+                [
+                    "all",
+                    [
+                        "!=",
+                        "race-path:class",
+                        "alternate"
+                    ],
+                    [
+                        "==",
+                        "type",
+                        "race-path"
+                    ]
+                ]
+            ],
+            "layout": {
+                "text-field": "suggested course",
+                "symbol-placement": "line",
+                "text-size": 10
+            },
+            "paint": {
+                "text-halo-color": "#ffffff",
+                "text-halo-width": 1,
+                "text-halo-blur": 1
+            }
+        },
+        {
+            "id": "path alternate",
+            "type": "line",
+            "metadata": {
+                "mapbox:group": "f8ba9ec5a3d0bd6a658ed20294abaa3c"
+            },
+            "source": "composite",
+            "source-layer": "NBC_Bay_Regatta-1",
+            "filter": [
+                "all",
+                [
+                    "==",
+                    "$type",
+                    "LineString"
+                ],
+                [
+                    "all",
+                    [
+                        "==",
+                        "race-path:class",
+                        "alternate"
+                    ],
+                    [
+                        "==",
+                        "type",
+                        "race-path"
+                    ]
+                ]
+            ],
+            "layout": {
+                "line-cap": "round",
+                "line-join": "round"
+            },
+            "paint": {
+                "line-dasharray": [
+                    3,
+                    3
+                ],
+                "line-gap-width": 0,
+                "line-color": "hsl(0, 100%, 50%)"
+            }
+        },
+        {
+            "id": "path alternate label",
+            "type": "symbol",
+            "metadata": {
+                "mapbox:group": "f8ba9ec5a3d0bd6a658ed20294abaa3c"
+            },
+            "source": "composite",
+            "source-layer": "NBC_Bay_Regatta-1",
+            "filter": [
+                "all",
+                [
+                    "==",
+                    "$type",
+                    "LineString"
+                ],
+                [
+                    "all",
+                    [
+                        "==",
+                        "race-path:class",
+                        "alternate"
+                    ],
+                    [
+                        "==",
+                        "type",
+                        "race-path"
+                    ]
+                ]
+            ],
+            "layout": {
+                "symbol-placement": "line",
+                "text-field": "alternate course",
+                "symbol-avoid-edges": true,
+                "text-ignore-placement": true,
+                "text-allow-overlap": true,
+                "text-size": 10
+            },
+            "paint": {
+                "text-halo-color": "hsl(0, 0%, 100%)",
+                "text-halo-width": 1,
+                "text-halo-blur": 1
+            }
+        },
+        {
+            "id": "start-finish-line-0",
+            "type": "line",
+            "metadata": {
+                "mapbox:group": "f8ba9ec5a3d0bd6a658ed20294abaa3c"
+            },
+            "source": "composite",
+            "source-layer": "NBC_Bay_Regatta-1",
+            "filter": [
+                "all",
+                [
+                    "==",
+                    "$type",
+                    "LineString"
+                ],
+                [
+                    "in",
+                    "type",
+                    "finish-line",
+                    "start-line"
+                ]
+            ],
+            "layout": {},
+            "paint": {
+                "line-gap-width": [
+                    "interpolate",
+                    [
+                        "exponential",
+                        1
+                    ],
+                    [
+                        "zoom"
+                    ],
+                    12,
+                    0,
+                    13,
+                    10,
+                    15,
+                    35
+                ]
+            }
+        },
+        {
+            "id": "start-finish-line-2",
+            "type": "line",
+            "metadata": {
+                "mapbox:group": "f8ba9ec5a3d0bd6a658ed20294abaa3c"
+            },
+            "source": "composite",
+            "source-layer": "NBC_Bay_Regatta-1",
+            "filter": [
+                "all",
+                [
+                    "==",
+                    "$type",
+                    "LineString"
+                ],
+                [
+                    "in",
+                    "type",
+                    "finish-line",
+                    "start-line"
+                ]
+            ],
+            "layout": {},
+            "paint": {
+                "line-gap-width": [
+                    "interpolate",
+                    [
+                        "cubic-bezier",
+                        0.5,
+                        0,
+                        0,
+                        1
+                    ],
+                    [
+                        "zoom"
+                    ],
+                    10,
+                    0,
+                    22,
+                    15
+                ],
+                "line-width": [
+                    "interpolate",
+                    [
+                        "cubic-bezier",
+                        0.5,
+                        0,
+                        0,
+                        1
+                    ],
+                    [
+                        "zoom"
+                    ],
+                    10,
+                    0,
+                    22,
+                    15
+                ],
+                "line-dasharray": [
+                    1,
+                    1
+                ],
+                "line-opacity": [
+                    "interpolate",
+                    [
+                        "linear"
+                    ],
+                    [
+                        "zoom"
+                    ],
+                    11,
+                    0,
+                    12,
+                    0.5,
+                    15,
+                    0.5,
+                    16,
+                    0
+                ]
+            }
+        },
+        {
+            "id": "start-finish-line-1",
+            "type": "line",
+            "metadata": {
+                "mapbox:group": "f8ba9ec5a3d0bd6a658ed20294abaa3c"
+            },
+            "source": "composite",
+            "source-layer": "NBC_Bay_Regatta-1",
+            "filter": [
+                "all",
+                [
+                    "==",
+                    "$type",
+                    "LineString"
+                ],
+                [
+                    "in",
+                    "type",
+                    "finish-line",
+                    "start-line"
+                ]
+            ],
+            "layout": {},
+            "paint": {
+                "line-dasharray": [
+                    0,
+                    1,
+                    1
+                ],
+                "line-width": [
+                    "interpolate",
+                    [
+                        "cubic-bezier",
+                        0.5,
+                        0,
+                        0,
+                        1
+                    ],
+                    [
+                        "zoom"
+                    ],
+                    10,
+                    0,
+                    22,
+                    15
+                ],
+                "line-opacity": [
+                    "interpolate",
+                    [
+                        "linear"
+                    ],
+                    [
+                        "zoom"
+                    ],
+                    11,
+                    0,
+                    12,
+                    0.5,
+                    15,
+                    0.5,
+                    16,
+                    0
+                ]
+            }
+        },
+        {
+            "id": "lines copy",
+            "type": "symbol",
+            "metadata": {
+                "mapbox:group": "f8ba9ec5a3d0bd6a658ed20294abaa3c"
+            },
+            "source": "composite",
+            "source-layer": "NBC_Bay_Regatta-1",
+            "filter": [
+                "all",
+                [
+                    "==",
+                    "$type",
+                    "LineString"
+                ],
+                [
+                    "in",
+                    "type",
+                    "finish-line",
+                    "start-line"
+                ]
+            ],
+            "layout": {
+                "text-line-height": 2,
+                "text-size": 20,
+                "text-allow-overlap": true,
+                "symbol-avoid-edges": true,
+                "text-ignore-placement": true,
+                "symbol-spacing": 250,
+                "text-font": [
+                    "Open Sans ExtraBold",
+                    "Arial Unicode MS Regular"
+                ],
+                "symbol-placement": "line",
+                "text-padding": 0,
+                "text-field": [
+                    "match",
+                    [
+                        "get",
+                        "type"
+                    ],
+                    "start-line",
+                    "Start",
+                    "finish-line",
+                    "Finish",
+                    ""
+                ],
+                "text-max-width": 100
+            },
+            "paint": {
+                "text-color": "hsl(0, 100%, 100%)",
+                "text-halo-color": "hsla(0, 100%, 0%, 0.75)",
+                "text-halo-width": 1,
+                "text-halo-blur": 1
+            }
+        },
+        {
+            "id": "buoy_lateral",
+            "type": "symbol",
+            "metadata": {
+                "mapbox:group": "f8ba9ec5a3d0bd6a658ed20294abaa3c"
+            },
+            "source": "composite",
+            "source-layer": "NBC_Bay_Regatta-1",
+            "filter": [
+                "all",
+                [
+                    "==",
+                    "$type",
+                    "Point"
+                ],
+                [
+                    "==",
+                    "seamark:type",
+                    "buoy_lateral"
+                ]
+            ],
+            "layout": {
+                "icon-image": [
+                    "match",
+                    [
+                        "get",
+                        "seamark:buoy_lateral:category"
+                    ],
+                    "starboard",
+                    "NChart-Symbol_INT_ConicalBuoy_Red",
+                    "port",
+                    "NChart-Symbol_INT_ConicalBuoy_Green",
+                    ""
+                ],
+                "text-field": [
+                    "to-string",
+                    [
+                        "get",
+                        "seamark:name"
+                    ]
+                ],
+                "text-anchor": "top-left",
+                "icon-size": [
+                    "interpolate",
+                    [
+                        "linear"
+                    ],
+                    [
+                        "zoom"
+                    ],
+                    15,
+                    0.2,
+                    22,
+                    1
+                ]
+            },
+            "paint": {
+                "text-color": "hsl(0, 100%, 50%)"
+            }
+        },
+        {
+            "id": "Pylon points",
+            "type": "circle",
+            "metadata": {
+                "mapbox:group": "f8ba9ec5a3d0bd6a658ed20294abaa3c"
+            },
+            "source": "composite",
+            "source-layer": "NBC_Bay_Regatta-1",
+            "filter": [
+                "all",
+                [
+                    "==",
+                    "$type",
+                    "Point"
+                ],
+                [
+                    "==",
+                    "seamark:type",
+                    "pylon"
+                ]
+            ],
+            "layout": {},
+            "paint": {
+                "circle-color": "hsl(0, 31%, 82%)",
+                "circle-stroke-width": [
+                    "interpolate",
+                    [
+                        "linear"
+                    ],
+                    [
+                        "zoom"
+                    ],
+                    11,
+                    0,
+                    22,
+                    1
+                ],
+                "circle-radius": [
+                    "interpolate",
+                    [
+                        "linear"
+                    ],
+                    [
+                        "zoom"
+                    ],
+                    0,
+                    0.01,
+                    16,
+                    2,
+                    22,
+                    30
+                ]
+            }
+        },
+        {
+            "id": "Race Staff",
+            "type": "symbol",
+            "metadata": {
+                "mapbox:group": "f8ba9ec5a3d0bd6a658ed20294abaa3c"
+            },
+            "source": "composite",
+            "source-layer": "NBC_Bay_Regatta-1",
+            "filter": [
+                "==",
+                "type",
+                "official"
+            ],
+            "layout": {
+                "icon-image": "index",
+                "icon-size": [
+                    "interpolate",
+                    [
+                        "exponential",
+                        0.5
+                    ],
+                    [
+                        "zoom"
+                    ],
+                    10,
+                    0,
+                    22,
+                    0.25
+                ]
+            },
+            "paint": {
+                "icon-opacity": 0.5
             }
         }
     ],
     "created": "2018-06-23T20:06:06.713Z",
     "id": "cjiru43j359ja2rnbm3kmu3ot",
-    "modified": "2018-06-26T12:56:32.939Z",
+    "modified": "2018-06-28T17:22:57.295Z",
     "owner": "breckwagner",
-    "visibility": "private",
+    "visibility": "public",
     "draft": false
 }
